@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<jnlp spec="1.0+" codebase="$project.Url" href="launch.jnlp">
+    <information>
+        <title>Hefesto PRC</title>
+        <vendor>Hefesto Corporation</vendor>
+        <homepage href="$project.Url"/>
+        <description>Sistema para controle de produção Indústria têxtil</description>
+        <description kind="short">Controle de Produção</description>
+        <icon href="hefestologo.png" kind="default"/>
+        <icon href="hefestologo.png" kind="shortcut"/>
+        <icon href="splashscreen.png" kind="splash"/>
+        <shortcut install="true" online="true" >
+            <menu submenu="Hefesto Corporation - PRC"/>
+            <desktop/>
+        </shortcut>
+    </information>
+    <security>
+        <all-permissions/>
+    </security>
+    <update check="timeout" policy="always"/>
+    <resources>
+        <j2se version="1.7+" java-vm-args="-Xmx512m -XX:+UseParallelGC -XX:+UseParallelOldGC" />
+        <property name="jnlp.versionEnabled" value="true"/>
+        $dependencies
+    </resources>
+    <application-desc main-class="$mainClass">
+    </application-desc>
+</jnlp>
